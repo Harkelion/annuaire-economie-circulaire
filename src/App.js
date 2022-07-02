@@ -4,29 +4,12 @@ import geoData from './data/Geo.json'
 import React, { useEffect, useState } from "react";
 import Logo from './components/Logo';
 import L from "leaflet";
-import { SyntheticEvent } from 'react';
-function onClick(event) {
-  console.log(event); // => objet nullifié.
-  console.log(event.type); // => "click"
-  const eventType = event.type; // => "click"
-
-  setTimeout(function() {
-    console.log(event.type); // => null
-    console.log(eventType); // => "click"
-  }, 0);
-
-  // Ne fonctionnera pas. this.state.clickEvent ne contiendra que des valeurs à null.
-  this.setState({clickEvent: event});
-
-  // Vous pouvez toutefois exporter les propriétés de l'événement.
-  this.setState({eventType: event.type});
-}
-
+import parse from "html-react-parser";
 
 
 function App() {
 const [data, setData] = useState(geoData.features);
-const radios = ["Réemploi", "Vente vrac", "Atelier de réparation", "Vente Occasion"]
+const radios = ["Réemploi", "Vente vrac", "Atelier de réparation", "Tomate"]
 const [selectedRadio, setSelectedRadio] = useState("")
 
   return (
@@ -71,7 +54,9 @@ const [selectedRadio, setSelectedRadio] = useState("")
               <span class="dashicons dashicons-admin-tools"/>
               <strong>Logo</strong> : {marker.properties.symbol}
               <br/>
-              <strong>Information</strong> : <a href={marker.properties.information} target="_blank">{marker.properties.information}</a>
+              <strong>Information</strong> :
+              <br />
+              {parse(marker.properties.information)}
               </Popup>
             </Marker>                   
           ))}

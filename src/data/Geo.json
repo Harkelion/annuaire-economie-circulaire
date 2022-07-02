@@ -51,6 +51,51 @@
           50.9151558824997
         ]
       }
+    },
+    {
+      "type": "Tomate",
+      "geometry": { "type": "Point", "coordinates": [1.87291, 50.91818, 0] },
+      "properties": {
+        "name": "Les Saveurs de la Saison - Ferme Muys",
+        "category": "Tomate",        
+        "information": "🛒   Vente directe <br>📅   Mercredi et vendredi : 17h-19h30<br>       Samedi : 9h-13h30 / 15h-18h<br>  <br>📍    66 route de Guînes<br>        62137 Coulogne<br><br>📞   03 21 35 49 08<br><br>🌐 <a href='https://www.facebook.com/Les-saveurs-de-la-saison-105759668756075' target='_blank'>'https://www.facebook.com/Les-saveurs-de-la-saison-105759668756075'</a>"
+      }
+    },
+    {
+      "type": "Tomate",
+      "geometry": { "type": "Point", "coordinates": [1.76155, 50.8774, 0] },
+      "properties": {
+        "name": "Le Jardin Colibri",
+        "category": "Tomate",
+        "information": "🛒   Vente directe<br>📅   Mercredi : 16h-19h30<br>  <br>📍     1730 route de Saint Inglevert<br>        62340 Pihen-lès-Guînes<br><br>📞   06 47 00 57 00<br><br>🌐 https://www.facebook.com/lejardincolibri"
+      }
+    },
+    {
+      "type": "Tomate",
+      "geometry": { "type": "Point", "coordinates": [2.07475, 50.84025, 0] },
+      "properties": {
+        "name": "Cueillette de Recques",
+        "category": "Tomate",
+        "information": "🛒  Vente directe sur commande<br>        Retrait des commandes<br>📅   Mercredi, vendredi et samedi : 9h30-12h<br><br>🛒   Distributeur automatique<br>📅    7j/7 : 24h/24<br><br>📍   Rue du Plouy<br>      62890 Recques-sur-hem<br><br>📞  06 47 00 57 00<br><br>🌐https://cueillettederecque.wixsite.com/monsite/services<br>🌐 https://www.facebook.com/Cueillette-Recques-Sur-Hem-1547697475495257/ "
+      }
+    },
+    {
+      "type": "Tomate",
+      "geometry": { "type": "Point", "coordinates": [1.897351, 50.747033, 0] },
+      "properties": {
+        "name": "La ferme du Boquet",
+        "category": "Tomate",
+        "information": "🛒 Vente directe sur commande<br><br>📍 20 impasse de la Biette<br>62850 Bainghen<br><br>📞 03 21 35 45 03<br><br>🌐https://www.facebook.com/La-Ferme-Maillard-1745550622128530/"
+      }
+    },
+    {
+      "type": "Tomate",
+      "geometry": { "type": "Point", "coordinates": [1.75976, 50.91362, 0] },
+      "properties": {
+        "name": "O Potager des Saveurs",
+        "category": "Tomate",
+        "information": "🛒 Distributeur automatique<br>📅 7j/7 : 24h/24<br><br>📍 1750 route d'Escalles<br>     62231 Peuplingues<br><br>🌐 https://www.facebook.com/%C3%94-Potager-des-Saveurs-101197432214957/?ref=page_internal"
+      }
     }
   ]
 }
