@@ -1,0 +1,56 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "symbol": "logo1",
+        "information": "https://www.sevadec.fr/",
+        "category": "Réemploi"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.9548797607421875,
+          50.95929172950455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "symbol": "logo2",
+        "information": "https://goo.gl/maps/VpxnE6AzfMVhntRJ6",
+        "category": "Vente vrac"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          1.8456099,
+          50.9488787
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "marker-color": "#7e7e7e",
+        "marker-size": "medium",
+        "symbol": "logo3",
+        "information": "ça c'est le point 3",
+        "category": "Atelier de réparation"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          2.077789306640625,
+          50.9151558824997
+        ]
+      }
+    }
+  ]
+}
