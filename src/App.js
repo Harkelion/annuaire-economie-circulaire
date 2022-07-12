@@ -7,9 +7,9 @@ import Hyperlink from "react-native-hyperlink";
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
 
-import Directory from "./data/DirectoryData";
-import AllCategory from "./data/AllCategory";
-import Territory from "./data/Territory";
+import Directory from "./data/DirectoryData.json";
+import AllCategory from "./data/AllCategory.json";
+import Territory from "./data/Territory.json";
 
 const data = Directory.features;
 const radios = AllCategory.name;
