@@ -1,9 +1,10 @@
 export default {
   name: [
     "Réemploi / Réparation",
-    "Zéro déchet / Vrac",
+    "Vente en vrac",
     "ESS / Filière locale",
     "Éco-entreprise",
-    "Protection de la nature / Biodiversité"
+    "Protection de la nature / Biodiversité",
+    "Produits zéro déchet"
   ]
 };

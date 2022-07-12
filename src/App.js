@@ -1,18 +1,28 @@
-import "./App.css";
 import React, { useState } from "react";
-import { Map as LeafletMap, TileLayer, Marker, Popup } from "react-leaflet";
+import { Map, TileLayer, Marker, Popup, Polygon } from "react-leaflet";
 import L from "leaflet";
 import parse from "html-react-parser";
-import MarkerClusterGroup from "react-leaflet-markercluster";
+import Hyperlink from "react-native-hyperlink";
 
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
 
-import Geo from "./data/Geo";
+import Directory from "./data/DirectoryData";
 import AllCategory from "./data/AllCategory";
+import Territory from "./data/Territory";
 
-const data = Geo.features;
+const data = Directory.features;
 const radios = AllCategory.name;
+
+const fillBlueOptions = { fillColor: "blue" };
+
+let territoryPosition = [];
+
+for (const eachPos of Territory.features[0].geometry.coordinates[0]) {
+  territoryPosition.push([eachPos[1], eachPos[0]]);
+}
+
+console.log(Directory.features[83].properties.logo);
 
 // let numberCategory = [];
 
@@ -30,6 +40,7 @@ function App() {
   const [selectedRadio, setSelectedRadio] = useState("");
   const [position, setPosition] = useState([50.8571, 1.9473, 10]);
   const [filterEntry, setFilterEntry] = useState("");
+  const [showList, setShowList] = useState(false);
 
   return (
     <div className="app">
@@ -42,11 +53,11 @@ function App() {
       />
       <ul className="radio-container">
         {radios.map((category, index) => (
-          <li>
+          <li key={index}>
             <button
               className="button-category"
               style={{
-                color: category === selectedRadio ? "rgb(0, 51, 99)" : ""
+                color: category === selectedRadio ? "rgb(0, 51, 99)" : "",
               }}
               htmlFor={category}
               id={category}
@@ -56,60 +67,108 @@ function App() {
                   : setSelectedRadio(e.target.id)
               }
             >
-              {category}{" "}
+              {category}
               {/* <sup className="numberCategory">{numberCategory[index]}</sup> */}
             </button>
           </li>
         ))}
       </ul>
-      <LeafletMap
-        center={[position[0], position[1]]}
-        zoom={position[2]}
-        scrollWheelZoom={true}
+      <button
+        className="showList"
+        onClick={() => {
+          setShowList(!showList);
+        }}
       >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors <a href="https://www.sevadec.fr/">SEVADEC</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <MarkerClusterGroup>
+        {" "}
+        <p>{!showList ? "Afficher la liste" : "Afficher la carte"}</p>
+      </button>
+      {!showList ? (
+        <Map
+          center={[position[0], position[1]]}
+          zoom={position[2]}
+          scrollWheelZoom={true}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors <a href="https://www.sevadec.fr/">SEVADEC</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Polygon
+            pathOptions={fillBlueOptions}
+            positions={territoryPosition}
+          />
           {data
             .filter((marker) =>
               marker.properties.description.includes(selectedRadio)
             )
             .filter((marker) =>
-              marker.properties.description.toLowerCase().includes(filterEntry)
+              (marker.properties.description + marker.properties.name)
+                .toLowerCase()
+                .includes(filterEntry)
+            )
+            .filter((marker) =>
+              marker.geometry.coordinates ? marker.geometry.coordinates : ""
             )
             .map((marker, index) => (
               <Marker
                 key={index}
                 position={[
                   marker.geometry.coordinates[1],
-                  marker.geometry.coordinates[0]
+                  marker.geometry.coordinates[0],
                 ]}
                 icon={
                   new L.icon({
-                    iconUrl:
-                      marker.properties.logo !== ""
-                        ? marker.properties.logo + ".png"
-                        : "defaultLogo.png",
-                    iconSize: [40, 40],
+                    iconUrl: "defaultLogo.png",
+                    // marker.properties.logo === ""
+                    //   ? "defaultLogo.png"
+                    //   : marker.properties.logo + ".png",
+                    iconSize: [25, 39],
                     iconAnchor: [10, 41],
-                    popupAnchor: [2, -40]
+                    popupAnchor: [2, -40],
                   })
                 }
               >
                 <Popup>
-                  <span class="dashicons dashicons-admin-tools" />
-                  <strong>Nom</strong> : {marker.properties.name}
-                  <br />
-                  <strong>Information</strong> :
-                  <br />
-                  {parse(marker.properties.description)}
+                  <span className="dashicons dashicons-admin-tools" />
+                  <strong>{marker.properties.name}</strong>
+                  <p />
+                  <Hyperlink
+                    linkDefault={true}
+                    linkStyle={{ color: "#2980b9", fontSize: 11 }}
+                  >
+                    {parse(marker.properties.description)}
+                  </Hyperlink>
                 </Popup>
               </Marker>
             ))}
-        </MarkerClusterGroup>
-      </LeafletMap>
+        </Map>
+      ) : (
+        <ul className="list">
+          {data
+            .filter((marker) =>
+              marker.properties.description.includes(selectedRadio)
+            )
+            .filter(
+              (marker) =>
+                (marker.properties.description + marker.properties.name)
+                  .toLowerCase()
+                  .includes(filterEntry) ||
+                marker.properties.name.toLowerCase().includes(filterEntry)
+            )
+            .map((marker, index) => (
+              <li className="list" key={index}>
+                <span className="dashicons dashicons-admin-tools" />
+                <strong>{marker.properties.name}</strong>
+                <p />
+                <Hyperlink
+                  linkDefault={true}
+                  linkStyle={{ color: "#2980b9", fontSize: 15 }}
+                >
+                  {parse(marker.properties.description)}
+                </Hyperlink>
+              </li>
+            ))}
+        </ul>
+      )}
     </div>
   );
 }
