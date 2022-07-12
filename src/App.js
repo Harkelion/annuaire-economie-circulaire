@@ -22,8 +22,6 @@ for (const eachPos of Territory.features[0].geometry.coordinates[0]) {
   territoryPosition.push([eachPos[1], eachPos[0]]);
 }
 
-console.log(Directory.features[83].properties.logo);
-
 // let numberCategory = [];
 
 // for (const category of radios) {
