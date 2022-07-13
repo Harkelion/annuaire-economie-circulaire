@@ -59,6 +59,43 @@ li {
   margin-left: -10px;
 }
 
+button.showcontact {
+  padding: 0;
+  border: none;
+  position: absolute;
+  margin-top: 130px;
+  margin-left: 85%;
+  border-radius: 5px;
+  background-color: rgb(6, 141, 107);
+  box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
+  height: 55px;
+    width: 55px;
+}
+
+@media (width <= 430px) {
+  button.showcontact {
+    padding: 0;
+    border: none;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 85%;
+    border-radius: 5px;
+    background-color: rgb(6, 141, 107);
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
+    height: 55px;
+      width: 55px;
+  }
+}
+
+p.contact img{
+  padding: 0;
+  margin-top: -30px;
+  margin-left: 3px;
+  display: block;
+  height: 50px;
+  width: 50px;
+}
+
 @media (width >= 1100px) {
   button.showList {
     border: none;
@@ -251,6 +288,53 @@ ul {
   flex-wrap: wrap;
   justify-content: center;
 }
+
+/* Contact CSS */
+
+form {
+  margin-top: 350px;
+  position: absolute;
+  border-radius: 5px;
+  padding: 10px 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.307);    
+  background-color: rgb(6 141 107 / 92%);
+  height: auto;
+  width: 350px; 
+  z-index: 110; 
+  display: inline-block;
+}
+
+div.contact {
+  font-size: 17px;
+  font-weight: bold;
+  color: white;
+    text-align: center;
+    padding: 10px;
+    display: grid;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+div.contact div{
+  margin-top: 10px;
+}
+
+div.contact input{
+  display: grid;
+}
+div.contact select{
+  display: block;
+}
+div.contact button{
+  display: block;
+}
+div.contact textarea{
+  display: block;
+  resize: none;
+  height: 100px;
+  width: 250px;
+}
+
 
 /* Logo CSS */
 

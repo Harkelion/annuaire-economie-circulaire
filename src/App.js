@@ -6,6 +6,7 @@ import Hyperlink from "react-native-hyperlink";
 
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
+import Contact from "./components/Contact";
 
 import Directory from "./data/DirectoryData.json";
 import AllCategory from "./data/AllCategory.json";
@@ -39,6 +40,7 @@ function App() {
   const [position, setPosition] = useState([50.8571, 1.9473, 10]);
   const [filterEntry, setFilterEntry] = useState("");
   const [showList, setShowList] = useState(false);
+  const [showContact, setShowContact] = useState(false);
 
   return (
     <div className="app">
@@ -71,6 +73,18 @@ function App() {
           </li>
         ))}
       </ul>
+      <button
+        className="showcontact"
+        onClick={() => {
+          setShowContact(!showContact);
+        }}
+      >
+        {" "}
+        <p className="contact">
+          <img src="contactIcon.png" alt="contactIcon"></img>
+        </p>
+      </button>
+      {!showContact ? "" : <Contact className="popup" />}
       <button
         className="showList"
         onClick={() => {
