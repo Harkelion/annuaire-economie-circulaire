@@ -279,7 +279,7 @@ button.button-category:hover {
   color: rgb(0, 51, 99);
 }
 
-label:hover {
+ul label:hover {
   color: rgb(0, 51, 99);
 }
 
@@ -305,14 +305,35 @@ form {
 }
 
 div.contact {
+  margin-top: 350px;
+  position: absolute;
+  border-radius: 5px;
+  padding: 10px 5px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.307);    
+  background-color: rgb(6 141 107 / 92%);
+  height: auto;
+  width: 350px; 
+  z-index: 110; 
+  display: inline-block;  
+}
+
+div.contact span.text {
+  text-align: left;
   font-size: 17px;
   font-weight: bold;
   color: white;
-    text-align: center;
     padding: 10px;
     display: grid;
     justify-content: space-evenly;
     justify-items: center;
+}
+
+div.contact a {
+  display: inline-block;
+}
+
+div.contact h2 {
+  margin-block-start: 0.53em;
 }
 
 div.contact div{
