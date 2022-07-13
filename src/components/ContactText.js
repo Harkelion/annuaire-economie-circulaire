@@ -17,8 +17,9 @@ const Contact = () => {
           ce document dûment rempli
           <a
             className="document"
-            href="https://www.sevadec.fr/wp-content/uploads/2022/07/DOC-A-REMPLIR-Inscription-annuaire-EC-SEVADEC.pdf"
             target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.sevadec.fr/wp-content/uploads/2022/07/DOC-A-REMPLIR-Inscription-annuaire-EC-SEVADEC.pdf"
           >
             <sup>[Télécharger]</sup>
           </a>
