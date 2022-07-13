@@ -60,6 +60,7 @@ li {
 }
 
 button.showcontact {
+  cursor: pointer;
   padding: 0;
   border: none;
   position: absolute;
@@ -70,6 +71,21 @@ button.showcontact {
   box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
   height: 55px;
     width: 55px;
+}
+
+@media (width <= 590px) {
+  button.showcontact {
+    padding: 0;
+    border: none;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 85%;
+    border-radius: 5px;
+    background-color: rgb(6, 141, 107);
+    box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
+    height: 55px;
+      width: 55px;
+  }
 }
 
 @media (width <= 430px) {
@@ -122,7 +138,7 @@ p.contact img{
   }
 }
 
-@media ( 1100px > width >= 580px) {
+@media ( 1100px > width >= 590px) {
   button.showList {
     border: none;
     position: absolute;
@@ -131,6 +147,7 @@ p.contact img{
     margin-bottom: 20px;
     border-radius: 5px;
     padding: 10px;
+    margin-left: 15px;
     background-color: rgb(6, 141, 107);
     box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
     height: auto;
@@ -148,7 +165,7 @@ p.contact img{
   }
 }
 
-@media ( 510px <= width < 580px) {
+@media ( 510px <= width < 590px) {
   button.showList {
     border: none;
     position: relative;
@@ -156,7 +173,9 @@ p.contact img{
     margin-right: 87%;
     margin-bottom: 116px;
     border-radius: 5px;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 15px;
     background-color: rgb(6, 141, 107);
     box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
     align-items: center;
@@ -184,7 +203,9 @@ p.contact img{
     margin-right: 87%;
     margin-bottom: 116px;
     border-radius: 5px;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 15px;
     background-color: rgb(6, 141, 107);
     box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
     align-items: center;
@@ -212,7 +233,9 @@ p.contact img{
     margin-right: 87%;
     margin-bottom: 138px;
     border-radius: 5px;
-    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 15px;
     background-color: rgb(6, 141, 107);
     box-shadow: 0px 4px 10px rgb(0 0 0 / 45%);
     align-items: center;
@@ -259,6 +282,10 @@ li.list {
   background-color: aliceblue;
   border-radius: 20px;
   border: #32a1ce;
+}
+
+a{
+  color: rgb(0, 17, 110);
 }
 
 sup.numberCategory {
@@ -318,7 +345,7 @@ div.contact {
 }
 
 div.contact span.text {
-  text-align: left;
+  text-align: center;
   font-size: 17px;
   font-weight: bold;
   color: white;
@@ -392,7 +419,7 @@ img {
   font-size: 35px;
   text-align: center;
   font-weight: bold;
-  padding-left: 80px;
+  padding-left: 35px;
   color: rgb(9, 58, 55);
   text-shadow: 4px 5px 14px black;
 }
@@ -402,7 +429,7 @@ img {
     font-size: 30px;
     text-align: center;
     font-weight: bold;
-    padding-left: 80px;
+    padding-left: 35px;
     color: rgb(9, 58, 55);
     text-shadow: 4px 5px 14px black;
   }      
@@ -468,17 +495,16 @@ p.info {
 
 ul.dataResult {
   padding: 0;
-  margin-top: 5px;
-  width: 300px;
-  height: 117px;
-  background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  overflow: hidden;
-  overflow-y: auto;
-  position: absolute;
-  z-index: 99;
-  overflow: scroll;
-  line-height: 2em;
+    margin-top: -8px;
+    width: 300px;
+    height: 117px;
+    background-color: white;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    z-index: 99;
+    overflow: scroll;
+    line-height: 2em;
 }
 
 .dataResult::-webkit-scrollbar {
@@ -496,13 +522,11 @@ ul.dataResult {
 .dataItem p {
   margin-left: 10px;
 }
+
 a {
-  text-decoration: none;
+  text-decoration: none;  
 }
 
-a:hover {
-  background-color: lightgrey;
-}
 
 button.searchBar {
   border: none;

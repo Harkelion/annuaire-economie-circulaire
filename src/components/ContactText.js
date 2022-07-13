@@ -5,19 +5,30 @@ const Contact = () => {
     <div className="contact">
       <span className="text">
         <h2>Contact</h2>
-        Vous souhaitez :
-        <br />
-        <br />
-        - Être recenser dans notre annuaire ?
-        <br />
-        - Apporter une modification ?
-        <br />
-        - Ne plus faire partis de l'annuaire ?
+        Si vous souhaitez être recenser dans notre annuaire :
         <br />
         <br />
         <span>
-          Contactez nous par{" "}
-          <a href="mailto:animation.territoire@sevadec.com"> mail</a>
+          Envoyez-nous par mail à{" "}
+          <a href="mailto:animation.territoire@sevadec.com">
+            animation.territoire@sevadec.com
+          </a>
+          <br />
+          ce document dûment rempli
+          <a
+            className="document"
+            href="https://www.sevadec.fr/wp-content/uploads/2022/07/DOC-A-REMPLIR-Inscription-annuaire-EC-SEVADEC.pdf"
+            target="_blank"
+          >
+            <sup>[Télécharger]</sup>
+          </a>
+          .
+        </span>
+        <br />
+        <span>
+          Si vous souhaitez apporter une modification ou ne plus faire partie de
+          l'annuaire faites le nous savoir par{" "}
+          <a href="mailto:animation.territoire@sevadec.com">mail</a>.
         </span>
       </span>
     </div>

@@ -5,7 +5,7 @@ const Logo = () => {
     <div className="logo">
       <span>
         <img src="./logo192.png" alt="logo SEVADEC" />
-        <h2>Carte du Sevadec</h2>
+        <h2>Annuaire du SEVADEC</h2>
       </span>
     </div>
   );
