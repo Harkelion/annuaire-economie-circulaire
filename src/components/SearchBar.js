@@ -63,7 +63,7 @@ function SearchBar({ placeholder, entry, stateChanger, filter, ...rest }) {
         <ul className="dataResult">
           {" "}
           <p className="info"> cliquez pour voir </p>
-          {filteredData.slice(0, 10).map((value, key) => {
+          {filteredData.map((value, key) => {
             return (
               <button
                 key={key}
@@ -74,7 +74,7 @@ function SearchBar({ placeholder, entry, stateChanger, filter, ...rest }) {
                       ? [
                           value.geometry.coordinates[1] - 0.0015,
                           value.geometry.coordinates[0],
-                          16
+                          16,
                         ]
                       : [50.8571, 1.9473, 10]
                   );

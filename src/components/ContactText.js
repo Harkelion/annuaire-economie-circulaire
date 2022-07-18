@@ -9,21 +9,18 @@ const Contact = () => {
         <br />
         <br />
         <span>
-          Envoyez-nous par mail à{" "}
-          <a href="mailto:animation.territoire@sevadec.com">
-            animation.territoire@sevadec.com
-          </a>
+          Envoyez-nous par{" "}
+          <a href="mailto:animation.territoire@sevadec.com">mail</a>
           <br />
-          ce document dûment rempli
+          ce document dûment rempli.
           <a
             className="document"
             target="_blank"
             rel="noopener noreferrer"
             href="https://www.sevadec.fr/wp-content/uploads/2022/07/DOC-A-REMPLIR-Inscription-annuaire-EC-SEVADEC.pdf"
           >
-            <sup>[Télécharger]</sup>
+            <img className="download" src="downloadIcon.png" />
           </a>
-          .
         </span>
         <br />
         <span>

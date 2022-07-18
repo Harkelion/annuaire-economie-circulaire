@@ -15,7 +15,7 @@ import Territory from "./data/Territory.json";
 const data = Directory.features;
 const radios = AllCategory.name;
 
-const fillBlueOptions = { fillColor: "blue" };
+const fillOptions = { fillColor: "blue" };
 
 let territoryPosition = [];
 
@@ -107,10 +107,7 @@ function App() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors <a href="https://www.sevadec.fr/">SEVADEC</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-          <Polygon
-            pathOptions={fillBlueOptions}
-            positions={territoryPosition}
-          />
+          <Polygon pathOptions={fillOptions} positions={territoryPosition} />
           {data
             .filter((marker) =>
               marker.properties.description.includes(selectedRadio)
