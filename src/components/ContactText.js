@@ -19,7 +19,11 @@ const Contact = () => {
             rel="noopener noreferrer"
             href="https://www.sevadec.fr/wp-content/uploads/2022/07/DOC-A-REMPLIR-Inscription-annuaire-EC-SEVADEC.pdf"
           >
-            <img className="download" src="downloadIcon.png" />
+            <img
+              className="download"
+              src="downloadIcon.png"
+              alt="downloadIcon.png"
+            />
           </a>
         </span>
         <br />
