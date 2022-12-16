@@ -6,7 +6,7 @@ import Hyperlink from "react-native-hyperlink";
 
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
-import ContactForm from "./components/ContactForm";
+import Contact from "./components/ContactText";
 
 import Directory from "./data/DirectoryData.json";
 import AllCategory from "./data/AllCategory.json";
@@ -92,7 +92,7 @@ function App() {
           ></img>
         </p>
       </button>
-      {!showContact ? "" : <ContactForm className="popup" />}
+      {!showContact ? "" : <Contact className="popup" />}
       <button
         className="showList"
         onClick={() => {
