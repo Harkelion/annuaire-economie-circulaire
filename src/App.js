@@ -6,7 +6,7 @@ import Hyperlink from "react-native-hyperlink";
 
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
-import Contact from "./components/ContactText";
+import ContactForm from "./components/ContactForm2";
 
 import Directory from "./data/DirectoryData.json";
 import AllCategory from "./data/AllCategory.json";
@@ -67,6 +67,11 @@ function App() {
                   : setSelectedRadio(e.target.id)
               }
             >
+              <img
+                className="logo-category"
+                src={index + 1 + ".png"}
+                alt={category}
+              />{" "}
               {category}
               {/* <sup className="numberCategory">{numberCategory[index]}</sup> */}
             </button>
@@ -87,7 +92,7 @@ function App() {
           ></img>
         </p>
       </button>
-      {!showContact ? "" : <Contact className="popup" />}
+      {!showContact ? "" : <ContactForm className="popup" />}
       <button
         className="showList"
         onClick={() => {
@@ -95,7 +100,14 @@ function App() {
         }}
       >
         {" "}
-        <p>{!showList ? "Afficher la liste" : "Afficher la carte"}</p>
+        <p>
+          <img
+            className="logo-liste"
+            src={!showList ? "./liste.png" : "./carte.png"}
+            alt="logo liste"
+          ></img>
+          {/* {!showList ? "Afficher la liste" : "Afficher la carte"} */}
+        </p>{" "}
       </button>
       {!showList ? (
         <Map
