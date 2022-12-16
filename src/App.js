@@ -6,7 +6,7 @@ import Hyperlink from "react-native-hyperlink";
 
 import Logo from "./components/Logo";
 import SearchBar from "./components/SearchBar";
-import Contact from "./components/ContactText";
+import Contact from "./components/ContactForm";
 
 import Directory from "./data/DirectoryData.json";
 import AllCategory from "./data/AllCategory.json";
