@@ -1,27 +1,40 @@
 import React from "react";
-import { Form, Field } from "react-netlify-form";
 
-class Contact extends React.Component {
-  handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted!");
-  };
-
-  render() {
-    return (
-      <Form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        onSubmit={this.handleSubmit}
-      >
-        <Field name="name" placeholder="Your Name" type="text" />
-        <Field name="email" placeholder="your@email.com" type="email" />
-        <Field name="message" component="textarea" />
-        <button type="submit">Send</button>
-      </Form>
-    );
-  }
-}
+const Contact = () => {
+  return (
+    <div className="contact">
+      <span className="text">
+        <h2>Contact</h2>
+        Si vous souhaitez être recensé dans notre annuaire :
+        <br />
+        <br />
+        <span>
+          Envoyez-nous par{" "}
+          <a href="mailto:animation.territoire@sevadec.com">mail</a>
+          <br />
+          ce document dûment rempli.
+          <a
+            className="document"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.sevadec.fr/wp-content/uploads/2022/11/Inscription-annuaire-EC-SEVADEC-VF.pdf"
+          >
+            <img
+              className="download"
+              src="downloadIcon.png"
+              alt="downloadIcon.png"
+            />
+          </a>
+        </span>
+        <br />
+        <span>
+          Si vous souhaitez apporter une modification ou ne plus faire partie de
+          l'annuaire, faites-le-nous savoir par{" "}
+          <a href="mailto:animation.territoire@sevadec.com">mail</a>.
+        </span>
+      </span>
+    </div>
+  );
+};
 
 export default Contact;
