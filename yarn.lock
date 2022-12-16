@@ -4685,6 +4685,13 @@ encodeurl@~1.0.2:
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
   integrity sha512-TPJXq8JqFaVYm2CWmPvnP2Iyo4ZSM7/QKcSmuMLDObfpH5fi7RUGmd/rTDf+rut/saiDiQEeVTNgAmJEdAOx0w==
 
+encoding@^0.1.11:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.13.tgz#56574afdd791f54a8e9b2785c0582a2d26210fa9"
+  integrity sha512-ETBauow1T35Y/WZMkio9jiM0Z5xjHHmJ4XmjZOq1l/dXz3lr2sRn87nJy20RupqSh1F2m3HHPSp8ShIPQJrJ3A==
+  dependencies:
+    iconv-lite "^0.6.2"
+
 end-of-stream@^1.0.0, end-of-stream@^1.1.0:
   version "1.4.4"
   resolved "https://registry.yarnpkg.com/end-of-stream/-/end-of-stream-1.4.4.tgz#5ae64a5f45057baf3626ec14da0ca5e4b2431eb0"
@@ -6183,6 +6190,13 @@ iconv-lite@0.4.24:
   dependencies:
     safer-buffer ">= 2.1.2 < 3"
 
+iconv-lite@^0.6.2:
+  version "0.6.3"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.6.3.tgz#a52f80bf38da1952eb5c681790719871a1a72501"
+  integrity sha512-4fCk79wshMdzMp2rH06qWrJE4iolqLhCUH+OiuIgU++RB0+94NlDL81atO7GX55uUKueo0txHNtvEyI6D7WdMw==
+  dependencies:
+    safer-buffer ">= 2.1.2 < 3.0.0"
+
 icss-utils@^4.0.0, icss-utils@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/icss-utils/-/icss-utils-4.1.1.tgz#21170b53789ee27447c2f47dd683081403f9a467"
@@ -6684,7 +6698,7 @@ is-shared-array-buffer@^1.0.2:
   dependencies:
     call-bind "^1.0.2"
 
-is-stream@^1.1.0:
+is-stream@^1.0.1, is-stream@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/is-stream/-/is-stream-1.1.0.tgz#12d4a3dd4e68e0b79ceb8dbc84173ae80d91ca44"
   integrity sha512-uQPm8kcs47jx38atAcWTVxyltQYoPT68y9aWYdV6yWXSyW8mzSat0TL6CiWdZeCdF3KrAvpVtnHbTv4RN+rqdQ==
@@ -6763,6 +6777,14 @@ isobject@^3.0.0, isobject@^3.0.1:
   version "3.0.1"
   resolved "https://registry.yarnpkg.com/isobject/-/isobject-3.0.1.tgz#4e431e92b11a9731636aa1f9c8d1ccbcfdab78df"
   integrity sha512-WhB9zCku7EGTj/HQQRz5aUQEUeoQZH2bWcltRErOpymJ4boYE6wL9Tbr23krRPSZ+C5zqNSrSw+Cc7sZZ4b7vg==
+
+isomorphic-fetch@2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/isomorphic-fetch/-/isomorphic-fetch-2.2.1.tgz#611ae1acf14f5e81f729507472819fe9733558a9"
+  integrity sha512-9c4TNAKYXM5PRyVcwUZrF3W09nQ+sO7+jydgs4ZGW9dhsLG2VOlISJABombdQqQRXCwuYG3sYV/puGf5rp0qmA==
+  dependencies:
+    node-fetch "^1.0.1"
+    whatwg-fetch ">=0.10.0"
 
 istanbul-lib-coverage@^3.0.0, istanbul-lib-coverage@^3.2.0:
   version "3.2.0"
@@ -8413,6 +8435,14 @@ node-fetch@2.6.7, node-fetch@^2.2.0, node-fetch@^2.6.0:
   dependencies:
     whatwg-url "^5.0.0"
 
+node-fetch@^1.0.1:
+  version "1.7.3"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
+  integrity sha512-NhZ4CsKx7cYm2vSrBAr2PvFOe6sWDf0UYLRqA6svUYg7+/TSfVAu49jYC4BvQ4Sms9SZgdqGBgroqfDhJdTyKQ==
+  dependencies:
+    encoding "^0.1.11"
+    is-stream "^1.0.1"
+
 node-forge@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-0.10.0.tgz#32dea2afb3e9926f02ee5ce8794902691a676bf3"
@@ -8478,6 +8508,16 @@ node-stream-zip@^1.9.1:
   version "1.15.0"
   resolved "https://registry.yarnpkg.com/node-stream-zip/-/node-stream-zip-1.15.0.tgz#158adb88ed8004c6c49a396b50a6a5de3bca33ea"
   integrity sha512-LN4fydt9TqhZhThkZIVQnF9cwjU3qmUH9h78Mx/K7d3VvfRqqwthLwJEUOEL0QPZ0XQmNN7be5Ggit5+4dq3Bw==
+
+nodemailer-react@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/nodemailer-react/-/nodemailer-react-1.0.2.tgz#b4f938f36645923a1b5a4cdef13c3b739f4bafc8"
+  integrity sha512-3XJ1lZUQivQDq9arYGSqbDAT8iDZEVMpRvECQ9MW6N6/c2U15ndcX69vjgshvYjm4Sbu8u+YLTy/D+zKIkka6A==
+
+nodemailer@^6.8.0:
+  version "6.8.0"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.8.0.tgz#804bcc5256ee5523bc914506ee59f8de8f0b1cd5"
+  integrity sha512-EjYvSmHzekz6VNkNd12aUqAco+bOkRe3Of5jVhltqKhEsjw/y0PYPJfp83+s9Wzh1dspYAkUW/YNQ350NATbSQ==
 
 normalize-css-color@^1.0.2:
   version "1.0.2"
@@ -10044,7 +10084,7 @@ react-app-polyfill@^2.0.0:
     regenerator-runtime "^0.13.7"
     whatwg-fetch "^3.4.1"
 
-react-async-script@^1.1.1:
+react-async-script@^1.0.0, react-async-script@^1.1.1:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-async-script/-/react-async-script-1.2.0.tgz#ab9412a26f0b83f5e2e00de1d2befc9400834b21"
   integrity sha512-bCpkbm9JiAuMGhkqoAiC0lLkb40DJ0HOEJIku+9JDjxX3Rcs+ztEOG13wbrOskt3n2DTrjshhaQ/iay+SnGg5Q==
@@ -10090,19 +10130,26 @@ react-devtools-core@4.24.0:
     shell-quote "^1.6.1"
     ws "^7"
 
-react-dom@17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-17.0.1.tgz#1de2560474ec9f0e334285662ede52dbc5426fc6"
-  integrity sha512-6eV150oJZ9U2t9svnsspTMrWNyHc6chX0KzDeAOXftRa8bNeOKTTfCJ7KorIwenkHd2xqVTBTCZd79yk/lx/Ug==
+react-dom@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-18.2.0.tgz#22aaf38708db2674ed9ada224ca4aa708d821e3d"
+  integrity sha512-6IMTriUmvsjHUjNtEDudZfuDQUoWXVxKHhlEGSk81n4YFS+r/Kl99wXiwlVXtPBtJenozv2P+hxDsw9eA7Xo6g==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    scheduler "^0.20.1"
+    scheduler "^0.23.0"
 
 react-error-overlay@^6.0.9:
   version "6.0.11"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.11.tgz#92835de5841c5cf08ba00ddd2d677b6d17ff9adb"
   integrity sha512-/6UZ2qgEyH2aqzYZgQPxEnz33NJ2gNsnHA2o5+o4wW9bLM/JYQitNP9xPhsXwC08hMMovfGe/8retsdDsczPRg==
+
+react-google-recaptcha@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/react-google-recaptcha/-/react-google-recaptcha-1.1.0.tgz#f33bef3e22e8c016820e80da48d573f516bb99e8"
+  integrity sha512-GMWZEsIKyBVG+iXfVMwtMVKFJATu5c+oguL/5i95H3Jb5d5CG4DY0W9t4QhdSSulgkXbZMgv0VSuGF/GV1ENTA==
+  dependencies:
+    prop-types "^15.5.0"
+    react-async-script "^1.0.0"
 
 react-google-recaptcha@^2.1.0:
   version "2.1.0"
@@ -10207,6 +10254,15 @@ react-native@0.69.1:
     whatwg-fetch "^3.0.0"
     ws "^6.1.4"
 
+react-netlify-form@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/react-netlify-form/-/react-netlify-form-2.1.5.tgz#46f9a7a6b2d25abf01222ddb9c6290848358636f"
+  integrity sha512-9zuvoDREf2sYAVo11iCbw89A7ivpYVN3o2S0U63wHRAv0W/dIHQUHl1mdAAAgqDSyeCpo88gnscKyl8xPPfGcw==
+  dependencies:
+    babel-runtime "^6.26.0"
+    isomorphic-fetch "2.2.1"
+    react-google-recaptcha "^1.0.2"
+
 react-netlify-forms@^1.3.2:
   version "1.3.2"
   resolved "https://registry.yarnpkg.com/react-netlify-forms/-/react-netlify-forms-1.3.2.tgz#951af52fde7d87c518918eac3aaa948dfe6a1729"
@@ -10303,13 +10359,12 @@ react-shallow-renderer@16.14.1:
     object-assign "^4.1.1"
     react-is "^16.12.0 || ^17.0.0"
 
-react@17.0.1:
-  version "17.0.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
-  integrity sha512-lG9c9UuMHdcAexXtigOZLX8exLWkW0Ku29qPRU8uhF2R9BN96dLCt0psvzPLlHc5OWkgymP3qwTRgbnw5BKx3w==
+react@^18.2.0:
+  version "18.2.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-18.2.0.tgz#555bd98592883255fa00de14f1151a917b5d77d5"
+  integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
   dependencies:
     loose-envify "^1.1.0"
-    object-assign "^4.1.1"
 
 read-pkg-up@^7.0.1:
   version "7.0.1"
@@ -10748,7 +10803,7 @@ safe-regex@^1.1.0:
   dependencies:
     ret "~0.1.10"
 
-"safer-buffer@>= 2.1.2 < 3", safer-buffer@^2.1.0:
+"safer-buffer@>= 2.1.2 < 3", "safer-buffer@>= 2.1.2 < 3.0.0", safer-buffer@^2.1.0:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
@@ -10796,18 +10851,17 @@ saxes@^5.0.1:
   dependencies:
     xmlchars "^2.2.0"
 
-scheduler@^0.20.1:
-  version "0.20.2"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.20.2.tgz#4baee39436e34aa93b4874bddcbf0fe8b8b50e91"
-  integrity sha512-2eWfGgAqqWFGqtdMmcL5zCMK1U8KlXv8SQFGglL3CEtd0aDVDWgeF/YoCmvln55m5zSk3J/20hTaSBeSObsQDQ==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-
 scheduler@^0.21.0:
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.21.0.tgz#6fd2532ff5a6d877b6edb12f00d8ab7e8f308820"
   integrity sha512-1r87x5fz9MXqswA2ERLo0EbOAU74DpIUO090gIasYTqlVoJeMcl+Z1Rg7WHz+qtPujhS/hGIt9kxZOYBV3faRQ==
+  dependencies:
+    loose-envify "^1.1.0"
+
+scheduler@^0.23.0:
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.23.0.tgz#ba8041afc3d30eb206a487b6b384002e4e61fdfe"
+  integrity sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==
   dependencies:
     loose-envify "^1.1.0"
 
@@ -12434,7 +12488,7 @@ whatwg-encoding@^1.0.5:
   dependencies:
     iconv-lite "0.4.24"
 
-whatwg-fetch@^3.0.0, whatwg-fetch@^3.4.1:
+whatwg-fetch@>=0.10.0, whatwg-fetch@^3.0.0, whatwg-fetch@^3.4.1:
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
   integrity sha512-bJlen0FcuU/0EMLrdbJ7zOnW6ITZLrZMIarMUVmdKtsGvZna8vxKYaexICWPfZ8qwf9fzNq+UEIZrnSaApt6RA==
